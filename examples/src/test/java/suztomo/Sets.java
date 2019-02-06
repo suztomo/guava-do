@@ -22,4 +22,12 @@ public class Sets {
         .collect(toImmutableSet());
     Truth.assertThat(mergedSet).contains("evening");
   }
+
+  @Test
+  public void noneMatch() {
+    int length = 5;
+    ImmutableSet<String> input = ImmutableSet.of("a", "foo", "aiueo");
+
+    Truth.assertThat(input.stream().noneMatch(element -> element.length() > length)).isTrue();
+  }
 }
