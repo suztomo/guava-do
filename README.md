@@ -4,5 +4,8 @@ This repository demonstrates the usage or Guava classes as well as Java collecti
 make our Java code simpler. Each section has sample code containing `QUESTION` function, which
 indicates the piece of the code can be replaced with a function that fits the purpose.
 
-- [Maps](./maps)
+- [Maps](./maps.md)
+- [Sets](./sets.md)
+- [Graphs](./graphs.md)
+
 
