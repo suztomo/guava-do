@@ -8,7 +8,7 @@ import com.google.common.truth.Truth;
 import java.util.Collection;
 import org.junit.Test;
 
-public class Sets {
+public class SetTest {
 
 
   @Test

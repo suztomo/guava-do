@@ -52,3 +52,33 @@ Truth.assertThat(filteredMultimap.values()).hasSize(4); // 1, 2, 3, 4
 ```java
 ImmutableListMultimap.copyOf(Multimaps.filterValues(multimap, value -> value < 5));
 ```
+
+## Map the value of Multimap
+
+```java
+ImmutableSetMultimap<String, Integer> multimap = ImmutableSetMultimap.of(
+    "tomo", 3,
+    "tomo", 9,
+    "joe", 5,
+    "kei", 2
+);
+
+ImmutableSetMultimap<String, Integer> transformed = QUESTION(multimap);
+Truth.assertThat(transformed.get("tomo")).containsExactly(9, 81);
+```
+
+### Answer
+
+```java
+ImmutableSetMultimap<String, Integer> map = ImmutableSetMultimap.of(
+    "tomo", 3,
+    "tomo", 9,
+    "joe", 5,
+    "kei", 2
+);
+
+Multimap<String, Integer> transformed =
+    ImmutableMultimap.copyOf(Multimaps.transformValues(map, i -> i * i));
+```
+
+Guava has Maps and Multimaps classes with such static methods for Map and Multimap respectively.

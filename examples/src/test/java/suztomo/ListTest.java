@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.function.Function;
 import org.junit.Test;
 
-public class Lists {
+public class ListTest {
 
   @Test
   public void sortByPortion() {
